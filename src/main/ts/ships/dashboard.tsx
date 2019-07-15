@@ -9,28 +9,28 @@ const initalShips: ShipDTO[] = [
     name: 'Adrian Maersk',
     land: 'Deutschland',
     size: 324,
-    info: 'Dakosy Additional Info Data'
+    info: 'Dakosy Data about the Adrian Maersk which is not shown in initial table'
   },
   {
     id: 21424,
     name: 'Aeneas',
     land: 'Saudi Arabien',
     size: 405,
-    info: 'Dakosy Additional Info Data'
+    info: 'Dakosy Data about the Aeneas which is not shown in initial table'
   },
   {
     id: 36343,
     name: 'A.P. Moeller',
     land: 'Deutschland',
     size: 485,
-    info: 'Dakosy Additional Info Data'
+    info: 'Dakosy Data about the A.P. Moeller which is not shown in initial table'
   },
   {
     id: 28766,
     name: 'Admiral Santosh',
     land: 'England',
     size: 210,
-    info: 'Dakosy Additional Info Data'
+    info: 'Dakosy Data about the Admiral Santosh which is not shown in initial table'
   }
 ];
 
@@ -77,7 +77,7 @@ function Dashboard() {
   };
 
   const onEditRow = () => {
-    // Felder editierbar machen
+    // Neue Werte aus Feldern den Variablen zuweisen
 
     setShowEditPopup(false);
   };
@@ -90,7 +90,7 @@ function Dashboard() {
     <div className="Ship-Info-Tabelle">
       {showInfoPopup && (
         <Popup //
-          text={"Here you'll find additional information."}
+          text={`Folgenden Informationen editieren: ${currentShip.info} `}
           onClose={onCloseInfoPopup}
           headline={`More Info about: ${currentShip.name}`}
         />
@@ -105,10 +105,13 @@ function Dashboard() {
       )}
       {showEditPopup && (
         <Popup //
-          text={`Folgenden Informationen editieren: ${currentShip.info} `}
+          text={'Edit the entries and save your changes'}
           headline={`Editing Ship: ${currentShip.name}`}
           onClose={onCloseEditPopup}
           onEdit={onEditRow}
+          tfInputName={currentShip.name}
+          tfInputLand={currentShip.land}
+          tfInputSize={currentShip.size}
         />
       )}
       <header>
@@ -135,13 +138,3 @@ function Dashboard() {
 }
 
 export default Dashboard;
-
-/*
-interface Props {
-  ship: ShipDTO;
-}
-
-function Dashboard(props: Props)
-
-const { id, name, info } = props.ship;
-*/

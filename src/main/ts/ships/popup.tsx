@@ -3,6 +3,9 @@ import React from 'react';
 interface Props {
   headline: string;
   text: string;
+  tfInputName?: string;
+  tfInputLand?: string;
+  tfInputSize?: number;
   onClose: () => void;
   onDelete?: () => void;
   onEdit?: () => void;
@@ -11,7 +14,7 @@ interface Props {
 class Popup extends React.Component<Props> {
   render() {
     // Destrukturierung der Props
-    const { headline, text, onClose, onDelete, onEdit } = this.props;
+    const { headline, text, onClose, onDelete, onEdit, tfInputName, tfInputLand, tfInputSize } = this.props;
 
     return (
       <div className="popup">
@@ -21,10 +24,16 @@ class Popup extends React.Component<Props> {
               <h2>{headline}</h2>
             </header>
             <p>{text}</p>
+            {onEdit && <label>Name:</label>}
+            {onEdit && <input placeholder={tfInputName} />}
+            {onEdit && <label>Land:</label>}
+            {onEdit && <input placeholder={tfInputLand} />}
+            {onEdit && <label>Größe:</label>}
+            {onEdit && <input value={tfInputSize} />}
+            <button onClick={onClose}>Close</button>
+            {onEdit && <button onClick={onEdit}>Save</button>}
+            {onDelete && <button onClick={onDelete}>Delete</button>}
           </div>
-          <button onClick={onClose}>Close</button>
-          {onDelete && <button onClick={onDelete}>Delete</button>}
-          {onEdit && <button onClick={onEdit}>Save Edit</button>}
         </div>
       </div>
     );

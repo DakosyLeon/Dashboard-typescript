@@ -12,7 +12,7 @@ function Navigation() {
           <NavLink to="/dashboard">Dashboard</NavLink>
         </li>
         <li>
-          <NavLink to="/App">App</NavLink>
+          <NavLink to="/testing">Testing</NavLink>
         </li>
       </ul>
     </div>

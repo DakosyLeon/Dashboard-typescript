@@ -2,6 +2,7 @@
 * Copyright(c) 2013-2017 DAKOSY AG, Hamburg, Germany
 * All rights reserved.
 */
+@import 'variables';
 
 // Bootstrap
 // <reference path="../../../node_modules/bootstrap/scss/bootstrap" />
@@ -13,5 +14,7 @@
 
 // Project
 @import 'navigation';
-@import 'test';
 @import 'popup';
+@import 'testing';
+@import 'login';
+@import 'dashboard';

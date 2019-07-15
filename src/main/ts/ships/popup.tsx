@@ -5,22 +5,26 @@ interface Props {
   text: string;
   onClose: () => void;
   onDelete?: () => void;
+  onEdit?: () => void;
 }
 
 class Popup extends React.Component<Props> {
   render() {
-    // Destrukturierung
-    const { headline, text, onClose, onDelete } = this.props;
+    // Destrukturierung der Props
+    const { headline, text, onClose, onDelete, onEdit } = this.props;
 
     return (
       <div className="popup">
         <div className="popup-inner">
           <div className="popup-content">
-            <h1>{headline}</h1>
+            <header>
+              <h2>{headline}</h2>
+            </header>
             <p>{text}</p>
           </div>
           <button onClick={onClose}>Close</button>
           {onDelete && <button onClick={onDelete}>Delete</button>}
+          {onEdit && <button onClick={onEdit}>Save Edit</button>}
         </div>
       </div>
     );

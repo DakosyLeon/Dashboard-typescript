@@ -1,3 +1,8 @@
+.Ship-Info-Tabelle {
+  text-align: center;
+  margin: 50px;
+}
+
 .app {
   text-align: center;
 }
@@ -12,22 +17,4 @@
   color: #fff;
   height: 150px;
   padding: 20px;
-}
-
-.app-intro {
-  font-size: large;
-}
-
-@keyframes app-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.h1-test {
-  color: #f00;
 }

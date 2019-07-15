@@ -1,7 +1,10 @@
+a {
+  color: #ffffff;
+}
+
 li {
   height: 100%;
   flex: 1;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,8 +14,8 @@ li {
 }
 
 li:hover {
-  background: #848484;
-  color: #212121;
+  background: #ffffff;
+  color: #ff0000;
 }
 
 h2 {
@@ -30,16 +33,12 @@ ul {
   width: 100%;
   margin: 0;
   top: 0;
-  background: rgb(187, 187, 187);
-  color: #ccc;
+  background: $secondary;
+  font-size: 1.2rem;
 }
 
 h2 {
   text-align: center;
-}
-
-.Ship-Info-Tabelle {
-  margin: 50px;
 }
 
 html {
@@ -112,7 +111,7 @@ td {
 th {
   font-weight: 700;
   text-align: left;
-  background-color: rgba(255, 0, 0, 0.644);
+  background-color: $secondary;
   margin: 0;
   padding: 0.5rem;
   border: 0;

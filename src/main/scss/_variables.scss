@@ -1,0 +1,41 @@
+// <reference path="../../../node_modules/bootstrap/scss/_functions" />
+@import '~bootstrap/scss/functions';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+$font-family-sans-serif: 'Roboto', sans-serif;
+
+$primary: #4170ab; // Hauptsächlich verwenden
+$secondary: #285c95;
+$success: #5fb95d;
+$info: #318aeb;
+$warning: #eace31;
+$danger: #cd4343;
+$light: #ebeef2;
+$medium-light: #c4c9cf;
+$medium-dark: #5b5f63;
+$dark: #464a4f;
+
+$theme-colors: (
+  'medium-light': $medium-light,
+  'medium-dark': $medium-dark
+);
+
+$border-radius: 0;
+
+$input-color: $dark;
+$input-btn-border-width: 2px;
+$input-border-color: $medium-dark;
+$input-padding-x: 0.5rem;
+$custom-select-padding-x: 0.5rem;
+
+$table-head-bg: $primary;
+$table-head-color: #fff;
+$table-body-color: #fff;
+$table-border-color: #fff;
+$table-accent-bg: $light;
+$table-accent-odd-bg: $medium-light;
+$table-cell-width: 105px;
+$table-cell-error-offset: -30px;
+
+$zindex-overlay: 5;
+$zindex-error: 1;
+$zindex-error-body: 2;

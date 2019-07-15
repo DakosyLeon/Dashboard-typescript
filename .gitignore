@@ -1,0 +1,8 @@
+node_modules
+dist
+.vscode
+coverage
+*.log
+*.log.*
+stats.json
+src/main/ts/config.ts

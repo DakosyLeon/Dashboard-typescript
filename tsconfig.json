@@ -1,0 +1,45 @@
+{
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "compilerOptions": {
+    "module": "es2015",
+    "target": "es2015",
+    "lib": [
+      "es2015",
+      "es2016",
+      "dom"
+    ],
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": false,
+    "noEmitOnError": false,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "baseUrl": "src/main/ts",
+    "types": [
+      "webpack-env",
+      "node",
+      "jest"
+    ],
+    "typeRoots": [
+      "node_modules/@types/",
+      "./node_modules/@types/",
+      "./typings"
+    ]
+  },
+  "include": [
+    "./src/*/ts/**/*.ts",
+    "./src/*/ts/**/*.tsx",
+    "./typings/custom.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "./src/**/*.spec.ts",
+    "./Jenkins"
+  ]
+}

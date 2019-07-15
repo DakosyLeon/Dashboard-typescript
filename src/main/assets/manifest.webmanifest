@@ -1,0 +1,16 @@
+{
+  "name": "ics-dashboard",
+  "short_name": "ics-dashboard",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color" : "#fff",
+  "theme_color" : "#4170AB",
+  "description": "ics-dashboard",
+  "icons": [],
+  "related_applications": [
+    {
+      "platform": "web",
+      "id": "de.dakosy.ics.dashboard"
+    }
+  ]
+}
